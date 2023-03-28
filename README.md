@@ -16,7 +16,7 @@ https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-h
 TextStream <br>
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/textstream-object
 
-Die jeweiligen Methoden und Eigenschaften werden in Klassenmodulen verpackt. Über Factory-Methoden ist ein einfacher Aufruf mit Intellisense möglich.
+Die jeweiligen Methoden und Eigenschaften werden in Klassenmodulen verpackt. Factory-Methoden vereinfachen den Aufruf.
 
 # Verwendung/Setup
 https://github.com/berlin-braun/my_VbaObject/blob/main/doc/setup.md
