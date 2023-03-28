@@ -43,7 +43,7 @@ Public Function textstream_Write_Text(ByVal filename As String _
 End Function
 
 Public Function textstream_WriteLine(ByVal filename As String _
-                                   , ByVal text As String)
+                                    , ByVal text As String)
   
   Dim my_Text As New my_TextStream_Object
   

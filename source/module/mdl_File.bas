@@ -163,9 +163,9 @@ Public Function file_Copy(ByVal filename As String _
   Set m_File = Nothing
 End Function
 
-Public Function file_CreateTextFile(ByVal filename As String _
-                         , Optional ByVal overwrite As Boolean = True _
-                         , Optional ByVal unicode As Boolean = False)
+Public Function file_CreateTextFile(filename As String _
+                         , Optional overwrite As Boolean = True _
+                         , Optional unicode As Boolean = False)
   Dim m_File    As New my_File_Object
   
   Set m_File = file_INIT(filename)

@@ -36,9 +36,10 @@ Public Property Get DateLastModified() As Date
   DateLastModified = my_fle.DateLastModified
 End Property
 
-Public Property Get Drive() As my_Drive_Object
-'  Set Drive = my_fle.Drive
-  Set Drive = drive_INIT(my_fle.Drive.DriveLetter)
+Public Property Get Drive() As Object
+  
+  Set Drive = my_fle.Drive
+
 End Property
 
 Public Property Let Name(ByVal str_File As String)
@@ -54,9 +55,10 @@ Public Property Get Name() As String
   Name = my_fle.Name
 End Property
 
-Public Property Get ParentFolder() As my_Folder_Object
-'  Set ParentFolder = my_fle.ParentFolder
-  Set ParentFolder = folder_INIT(my_fle.ParentFolder)
+Public Property Get ParentFolder() As Object
+  
+  Set ParentFolder = my_fle.ParentFolder
+
 End Property
 
 Public Property Get Path() As String
@@ -116,21 +118,19 @@ End Function
 
 Public Function OpenAsTextStream(ByVal filename As String _
                       , Optional ByVal mode As IOMode = ForAppending _
-                      , Optional ByVal format As Tristate = TristateUseDefault) As my_File_Object
-'  Dim my_txs As Object
-'
-'  Set my_fso = Nothing
-'  Set my_txs = Nothing
-'
-'  Set my_fso = New Scripting.FileSystemObject
-'  Set my_fle = my_fso.GetFile(filename)
-'  Set my_txs = my_fle.OpenAsTextStream(filename, mode, format)
-'
-'  Set OpenAsTextStream = my_txs
-'
-'  Set my_txs = Nothing
-  
-  Set OpenAsTextStream = file_OpenAsTextStream(filename, mode, format)
+                      , Optional ByVal format As Tristate = TristateUseDefault) As Object
+  Dim my_txs As Object
+
+  Set my_fso = Nothing
+  Set my_txs = Nothing
+
+  Set my_fso = New Scripting.FileSystemObject
+  Set my_fle = my_fso.GetFile(filename)
+  Set my_txs = my_fle.OpenAsTextStream(filename, mode, format)
+
+  Set OpenAsTextStream = my_txs
+
+  Set my_txs = Nothing
   
 End Function
 

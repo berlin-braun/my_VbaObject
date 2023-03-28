@@ -122,10 +122,9 @@ Public Function GetBaseName(ByVal Path As String) As String
   
 End Function
 
-Public Function GetDrive(ByVal drivespec As String) As my_Drive_Object
+Public Function GetDrive(ByVal drivespec As String) As Object
   
-'  Set GetDrive = my_fso.GetDrive(drivespec)
-  Set GetDrive = drive_INIT(drivespec)
+  Set GetDrive = my_fso.GetDrive(drivespec)
   
 End Function
 
@@ -141,10 +140,9 @@ Public Function GetExtensionName(ByVal Path As String) As String
   
 End Function
 
-Public Function GetFile(ByVal filespec As String) As my_File_Object
+Public Function GetFile(ByVal filespec As String) As Object
   
-'  Set GetFile = my_fso.GetFile(filespec)
-  Set GetFile = file_INIT(filespec)
+  Set GetFile = my_fso.GetFile(filespec)
   
 End Function
 
@@ -154,10 +152,9 @@ Public Function GetFileName(ByVal pathspec As String) As String
   
 End Function
 
-Public Function GetFolder(ByVal folderspec As String) As my_Folder_Object
+Public Function GetFolder(ByVal folderspec As String) As Object
   
-'  Set GetFolder = my_fso.GetFolder(folderspec)
-  Set GetFolder = folder_INIT(folderspec)
+  Set GetFolder = my_fso.GetFolder(folderspec)
   
 End Function
 
@@ -196,19 +193,17 @@ End Function
 Public Function OpenTextFile(ByVal filename As String _
                   , Optional ByVal mode As IOMode = ForAppending _
                   , Optional ByVal create As Boolean = False _
-                  , Optional ByVal format As Tristate = TristateUseDefault) As my_File_Object
+                  , Optional ByVal format As Tristate = TristateUseDefault) As Object
   
-'  Dim my_txs As Object
+  Dim my_txs As Object
   
-'  Set my_fso = Nothing
-'  Set my_txs = Nothing
-'  Set my_fso = New Scripting.FileSystemObject
-'  Set my_txs = my_fso.OpenTextFile(filename, mode, create, format)
+  Set my_fso = Nothing
+  Set my_txs = Nothing
+  Set my_fso = New Scripting.FileSystemObject
+  Set my_txs = my_fso.OpenTextFile(filename, mode, create, format)
   
-'  Set OpenTextFile = my_txs
-'  Set my_txs = Nothing
-
-  Set OpenTextFile = textstream_INIT(filename, mode, create, format)
+  Set OpenTextFile = my_txs
+  Set my_txs = Nothing
 
 End Function
 

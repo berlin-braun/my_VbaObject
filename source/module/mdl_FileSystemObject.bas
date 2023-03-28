@@ -75,7 +75,7 @@ Public Function filesystemobject_DeleteFile(ByVal filespec As String _
 End Function
 
 Public Function filesystemobject_DeleteFolder(ByVal folderspec As String _
-                                   , Optional ByVal force As Boolean = False)
+                                 , Optional ByVal force As Boolean = False)
   Dim m_FSO As New my_FileSystemObject_Object
 
   m_FSO.DeleteFolder folderspec, force
@@ -123,7 +123,7 @@ Public Function filesystemobject_GetBaseName(ByVal Path As String) As String
   Set m_FSO = Nothing
 End Function
 
-Public Function filesystemobject_GetDrive(ByVal drivespec As String) As my_Drive_Object
+Public Function filesystemobject_GetDrive(ByVal drivespec As String) As Object
   Dim m_FSO As New my_FileSystemObject_Object
   
   Set filesystemobject_GetDrive = m_FSO.GetDrive(drivespec)
@@ -147,7 +147,7 @@ Public Function filesystemobject_GetExtensionName(ByVal Path As String) As Strin
   Set m_FSO = Nothing
 End Function
 
-Public Function filesystemobject_GetFile(ByVal filespec As String) As my_File_Object
+Public Function filesystemobject_GetFile(ByVal filespec As String) As Object
   Dim m_FSO As New my_FileSystemObject_Object
   
   Set filesystemobject_GetFile = m_FSO.GetFile(filespec)
@@ -163,7 +163,7 @@ Public Function filesystemobject_GetFileName(ByVal pathspec As String) As String
   Set m_FSO = Nothing
 End Function
 
-Public Function filesystemobject_GetFolder(ByVal folderspec As String) As my_Folder_Object
+Public Function filesystemobject_GetFolder(ByVal folderspec As String) As Object
   Dim m_FSO As New my_FileSystemObject_Object
     
   Set filesystemobject_GetFolder = m_FSO.GetFolder(folderspec)
@@ -215,7 +215,7 @@ End Function
 Public Function filesystemobject_OpenTextFile(ByVal filename As String _
                                    , Optional ByVal mode As IOMode = ForAppending _
                                    , Optional ByVal create As Boolean = False _
-                                   , Optional ByVal format As Tristate = TristateUseDefault) As my_File_Object
+                                   , Optional ByVal format As Tristate = TristateUseDefault) As Object
   Dim m_FSO As New my_FileSystemObject_Object
   
   Set filesystemobject_OpenTextFile = m_FSO.OpenTextFile(filename, mode, create, format)
