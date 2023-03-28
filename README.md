@@ -1,22 +1,19 @@
 # my_VbaObject
 Wrapper für VBA-objects
 
-FileSystemObject object
+FileSystemObject object<br>
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/filesystemobject-object
 
 Drive object<br>
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/drive-object
 
-File object
-
+File object<br>
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/file-object
 
-Folder object
-
+Folder object<br>
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/folder-object
 
-TextStream object
-
+TextStream object<br>
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/textstream-object
 
 Die jeweiligen Methoden und Eigenschaften werden in Klassenmodulen verpackt.
