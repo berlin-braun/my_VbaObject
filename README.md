@@ -1,5 +1,5 @@
 # my_VbaObject
-Wrapper für eine Auswahl von <a href="ttps://learn.microsoft.com/en-us/office/vba/language/reference/objects-visual-basic-for-applications" >VBA-objects</a> 
+Wrapper für eine Auswahl von <a href="https://learn.microsoft.com/en-us/office/vba/language/reference/objects-visual-basic-for-applications" >VBA-objects</a> 
 
 FileSystemObject <br>
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/filesystemobject-object
