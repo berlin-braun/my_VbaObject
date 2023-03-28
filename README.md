@@ -1,20 +1,24 @@
 # my_VbaObject
 Wrapper für eine Auswahl von <a href="https://learn.microsoft.com/en-us/office/vba/language/reference/objects-visual-basic-for-applications" >VBA-objects</a> 
 
-FileSystemObject <br>
-https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/filesystemobject-object
+<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/filesystemobject-object" >FileSystemObject</a> 
+
 
 Drive <br>
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/drive-object
+<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/drive-object" >Drive</a>  
 
 File <br>
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/file-object
+<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/file-object" >File</a> 
 
 Folder <br>
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/folder-object
+<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/folder-object" >Folder</a> 
 
 TextStream <br>
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/textstream-object
+<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/textstream-object" >TextStream</a> 
 
 Die jeweiligen Methoden und Eigenschaften werden in Klassenmodulen verpackt. Factory-Methoden vereinfachen den Aufruf.
 
