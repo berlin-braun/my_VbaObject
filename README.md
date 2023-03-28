@@ -2,10 +2,12 @@
 Wrapper für eine Auswahl von <a href="https://learn.microsoft.com/en-us/office/vba/language/reference/objects-visual-basic-for-applications" >VBA-objects</a> 
 
 <a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/filesystemobject-object" >FileSystemObject</a> <br>
-<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/drive-object" >Drive</a>  
-<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/file-object" >File</a> 
-<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/folder-object" >Folder</a> 
-<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/textstream-object" >TextStream</a> 
+<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/drive-object" >Drive</a>  <br>
+<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/file-object" >File</a> <br>
+<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/folder-object" >Folder</a> <br>
+<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/textstream-object" >TextStream</a> <br>
+
+Die jeweiligen Methoden und Eigenschaften werden in Klassenmodulen verpackt. Factory-Methoden vereinfachen den Aufruf.
 
 Drive <br>
          https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/drive-object
@@ -23,7 +25,7 @@ TextStream <br>
 https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/textstream-object
 
 
-Die jeweiligen Methoden und Eigenschaften werden in Klassenmodulen verpackt. Factory-Methoden vereinfachen den Aufruf.
+
 
 # Verwendung/Setup
 https://github.com/berlin-braun/my_VbaObject/blob/main/doc/setup.md
