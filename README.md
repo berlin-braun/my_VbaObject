@@ -9,24 +9,6 @@ Wrapper für eine Auswahl von <a href="https://learn.microsoft.com/en-us/office/
 
 Die jeweiligen Methoden und Eigenschaften werden in Klassenmodulen verpackt. Factory-Methoden vereinfachen den Aufruf.
 
-Drive <br>
-         https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/drive-object
-<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/drive-object" >Drive</a>  
-
-File <br>
-https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/file-object
-<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/file-object" >File</a> 
-
-Folder <br>
-https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/folder-object
-
-
-TextStream <br>
-https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/textstream-object
-
-
-
-
 # Verwendung/Setup
 https://github.com/berlin-braun/my_VbaObject/blob/main/doc/setup.md
 
