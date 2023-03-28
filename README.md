@@ -3,6 +3,8 @@ Wrapper für eine Auswahl von <a href="https://learn.microsoft.com/en-us/office/
 
 <a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/filesystemobject-object" >FileSystemObject</a> <br>
 <a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/drive-object" >Drive</a>  
+<a href="https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/file-object" >File</a> 
+
 
 Drive <br>
          https://learn.microsoft.com/en-us/office/vba/language/reference/user-interface-help/drive-object
