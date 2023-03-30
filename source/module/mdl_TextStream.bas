@@ -28,6 +28,16 @@ Public Function textstream_INIT(ByVal filename As String _
 End Function
 
 
+' ----------------------------------------------------------------
+' Procedure Name:   textstream_Write_Text
+' Purpose:          Writes a specified string to a TextStream file.
+' Procedure Kind:   Function
+' Author:           Thomas Braun
+' Date:             30.03.2023
+' Procedure Access: Public
+' Parameter filename (String): the specific filename
+' Parameter text (String): Required. The text you want to write to the file.
+' ----------------------------------------------------------------
 Public Function textstream_Write_Text(ByVal filename As String _
                                     , ByVal text As String)
   
@@ -42,6 +52,17 @@ Public Function textstream_Write_Text(ByVal filename As String _
   
 End Function
 
+
+' ----------------------------------------------------------------
+' Procedure Name:   textstream_WriteLine
+' Purpose:          Writes a specified string and newline character to a TextStream file.
+' Procedure Kind:   Function
+' Author:           Thomas Braun
+' Date:             30.03.2023
+' Procedure Access: Public
+' Parameter filename (String): the specific filename
+' Parameter text (String): Optional. The text you want to write to the file. If omitted, a newline character is written to the file.
+' ----------------------------------------------------------------
 Public Function textstream_WriteLine(ByVal filename As String _
                                     , ByVal text As String)
   
@@ -56,6 +77,17 @@ Public Function textstream_WriteLine(ByVal filename As String _
   
 End Function
 
+
+' ----------------------------------------------------------------
+' Procedure Name:   textstream_WriteBlankLines
+' Purpose:          Writes a specified number of newline characters to a TextStream file.
+' Procedure Kind:   Function
+' Author:           Thomas Braun
+' Date:             30.03.2023
+' Procedure Access: Public
+' Parameter filename (String): the specific filename
+' Parameter lines (Long): Required. Number of newline characters you want to write to the file.
+' ----------------------------------------------------------------
 Public Function textstream_WriteBlankLines(ByVal filename As String _
                                          , ByVal lines As Long)
   
@@ -70,6 +102,17 @@ Public Function textstream_WriteBlankLines(ByVal filename As String _
   
 End Function
 
+
+' ----------------------------------------------------------------
+' Procedure Name:   textstream_ReadAll
+' Purpose:          Reads an entire TextStream file and returns the resulting string.
+' Procedure Kind:   Function
+' Author:           Thomas Braun
+' Date:             30.03.2023
+' Procedure Access: Public
+' Return Type:      String
+' Parameter filename (String): the specific filename
+' ----------------------------------------------------------------
 Public Function textstream_ReadAll(ByVal filename As String) As String
   
   Dim my_Text     As New my_TextStream_Object
@@ -85,6 +128,17 @@ Public Function textstream_ReadAll(ByVal filename As String) As String
   
 End Function
 
+
+' ----------------------------------------------------------------
+' Procedure Name:   textstream_ReadLine
+' Purpose:          Reads an entire line (up to, but not including, the newline character) from a TextStream file and returns the resulting string.
+' Procedure Kind:   Function
+' Author:           Thomas Braun
+' Date:             30.03.2023
+' Procedure Access: Public
+' Return Type:      String
+' Parameter filename (String): the specific filename
+' ----------------------------------------------------------------
 Public Function textstream_ReadLine(ByVal filename As String) As String
   
   Dim my_Text     As New my_TextStream_Object
