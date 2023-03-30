@@ -175,7 +175,7 @@ End Property
 
 ' ----------------------------------------------------------------
 ' Procedure Name:   Size
-' Purpose:          For files, returns the size, in bytes, of the specified file. For folders, returns the size, in bytes, of all files and subfolders contained in the folder.
+' Purpose:          Returns the size, in bytes, of the specified file.
 ' Procedure Kind:   Eigenschaft (Get)
 ' Author:           Thomas Braun
 ' Date:             30.03.2023
@@ -189,7 +189,7 @@ End Property
 
 ' ----------------------------------------------------------------
 ' Procedure Name:   Typ
-' Purpose:          Returns information about the type of a file or folder. For example, for files ending in .TXT, "Text Document" is returned.
+' Purpose:          Returns information about the type of a file. For example, for files ending in .TXT, "Text Document" is returned.
 ' Procedure Kind:   Eigenschaft (Get)
 ' Author:           Thomas Braun
 ' Date:             30.03.2023
@@ -213,7 +213,7 @@ End Property
 ' Author:           Thomas Braun
 ' Date:             30.03.2023
 ' Procedure Access: Public
-' Parameter force (Boolean): Optional. Boolean value that is True if files or folders with the read-only attribute set are to be deleted; False (default) if they are not.
+' Parameter force (Boolean): Optional. Boolean value that is True if files with the read-only attribute set are to be deleted; False (default) if they are not.
 ' ----------------------------------------------------------------
 Public Function Delete(Optional force As Boolean = False)
   
@@ -229,7 +229,7 @@ End Function
 ' Author:           Thomas Braun
 ' Date:             30.03.2023
 ' Procedure Access: Public
-' Parameter destination (String): Required. Destination where the file or folder is to be moved. Wildcard characters are not allowed.
+' Parameter destination (String): Required. Destination where the file is to be moved. Wildcard characters are not allowed.
 ' ----------------------------------------------------------------
 Public Function Move(ByVal destination As String)
   
@@ -245,10 +245,11 @@ End Function
 ' Procedure Access: Public
 ' Author: Thomas Braun
 ' Date: 30.03.2023
-' Parameter destination (String): Required. Destination where the file or folder is to be copied. Wildcard characters are not allowed.
-' Parameter overwrite (Boolean): Optional. Boolean value that is True (default) if existing files or folders are to be overwritten; False if they are not.
+' Parameter destination (String): Required. Destination where the file is to be copied. Wildcard characters are not allowed.
+' Parameter overwrite (Boolean): Optional. Boolean value that is True (default) if existing files are to be overwritten; False if they are not.
 ' ----------------------------------------------------------------
-Public Function Copy(ByVal destination As String, Optional ByVal overwrite As Boolean = True)
+Public Function Copy(ByVal destination As String _
+          , Optional ByVal overwrite As Boolean = True)
   
   my_fso.CopyFile my_fle.Path, destination, overwrite
   

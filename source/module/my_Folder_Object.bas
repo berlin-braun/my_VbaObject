@@ -208,7 +208,7 @@ End Property
 ' Author:           Thomas Braun
 ' Date:             30.03.2023
 ' Procedure Access: Public
-' Parameter force (Boolean): Optional. Boolean value that is True if files or folders with the read-only attribute set are to be deleted; False (default) if they are not.
+' Parameter force (Boolean): Optional. Boolean value that is True if folders with the read-only attribute set are to be deleted; False (default) if they are not.
 ' ----------------------------------------------------------------
 Public Function Delete(Optional force As Boolean = False)
   
@@ -224,7 +224,7 @@ End Function
 ' Author:           Thomas Braun
 ' Date:             30.03.2023
 ' Procedure Access: Public
-' Parameter destination (String): Required. Destination where the file or folder is to be moved. Wildcard characters are not allowed.
+' Parameter destination (String): Required. Destination where the folder is to be moved. Wildcard characters are not allowed.
 ' ----------------------------------------------------------------
 Public Function Move(ByVal destination As String)
   
@@ -240,8 +240,8 @@ End Function
 ' Author:           Thomas Braun
 ' Date:             30.03.2023
 ' Procedure Access: Public
-' Parameter destination (String): Required. Destination where the file or folder is to be copied. Wildcard characters are not allowed.
-' Parameter overwrite (Boolean):   Optional. Boolean value that is True (default) if existing files or folders are to be overwritten; False if they are not.
+' Parameter destination (String): Required. Destination where the folder is to be copied. Wildcard characters are not allowed.
+' Parameter overwrite (Boolean):   Optional. Boolean value that is True (default) if existing folders are to be overwritten; False if they are not.
 ' ----------------------------------------------------------------
 Public Function Copy(ByVal destination As String _
           , Optional ByVal overwrite As Boolean = True)
