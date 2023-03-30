@@ -176,8 +176,8 @@ Public Function file_CreateTextFile(filename As String _
 End Function
 
 Public Function file_OpenAsTextStream(ByVal filename As String _
-                           , Optional ByVal mode As IOMode = ForAppending _
-                           , Optional ByVal format As Tristate = TristateUseDefault) As Object
+                           , Optional ByVal mode As my_IOMode = ForAppending _
+                           , Optional ByVal format As my_Tristate = TristateUseDefault) As Object
   Dim m_File As New my_File_Object
   
   Set m_File = file_INIT(filename)

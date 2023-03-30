@@ -5,14 +5,14 @@ Attribute VB_Exposed = False
 Option Compare Database
 Option Explicit
 
-Private my_fso As Scripting.FileSystemObject
+Private my_fso As Object ' Scripting.FileSystemObject
 '
 
 
 Private Sub Class_Initialize()
   
   If my_fso Is Nothing Then
-    Set my_fso = New Scripting.FileSystemObject
+    Set my_fso = CreateObject("Scripting.FileSystemObject") ' New Scripting.FileSystemObject
   End If
   
 End Sub
@@ -73,7 +73,7 @@ Public Function CreateTextFile(ByVal filename As String _
                     , Optional ByVal unicode As Boolean = False)
   
   Set my_fso = Nothing
-  Set my_fso = New Scripting.FileSystemObject
+  Set my_fso = CreateObject("Scripting.FileSystemObject") ' New Scripting.FileSystemObject
   my_fso.CreateTextFile filename, overwrite, unicode
   
 End Function
@@ -191,15 +191,15 @@ Public Function MoveFolder(ByVal source As String _
 End Function
 
 Public Function OpenTextFile(ByVal filename As String _
-                  , Optional ByVal mode As IOMode = ForAppending _
+                  , Optional ByVal mode As my_IOMode = ForAppending _
                   , Optional ByVal create As Boolean = False _
-                  , Optional ByVal format As Tristate = TristateUseDefault) As Object
+                  , Optional ByVal format As my_Tristate = TristateUseDefault) As Object
   
   Dim my_txs As Object
   
   Set my_fso = Nothing
   Set my_txs = Nothing
-  Set my_fso = New Scripting.FileSystemObject
+  Set my_fso = CreateObject("Scripting.FileSystemObject") ' New Scripting.FileSystemObject
   Set my_txs = my_fso.OpenTextFile(filename, mode, create, format)
   
   Set OpenTextFile = my_txs

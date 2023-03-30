@@ -14,7 +14,7 @@ Public Enum my_DriveType
   RAM_Disk = 5
 End Enum
 
-Private my_fso As Scripting.FileSystemObject
+Private my_fso As Object ' Scripting.FileSystemObject
 Private my_drv As Object
 '
 
@@ -40,13 +40,13 @@ End Property
 Public Property Let DriveLetter(ByVal str_Drive As String)
   
   Set my_fso = Nothing
-  Set my_fso = New Scripting.FileSystemObject
+  Set my_fso = CreateObject("Scripting.FileSystemObject") ' New Scripting.FileSystemObject
   
   Set my_drv = my_fso.GetDrive(UCase(str_Drive))
   
 End Property
 
-Public Property Get DriveType() As DriveTypeConst
+Public Property Get DriveType() As my_DriveType ' DriveTypeConst
   DriveType = my_drv.DriveType
 End Property
 

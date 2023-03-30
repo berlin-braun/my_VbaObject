@@ -26,7 +26,7 @@ Public Function drive_AvailableSpace(ByVal str_Drive_Letter As String) As Long
   Set m_Drive = Nothing
 End Function
 
-Public Function drive_DriveType(ByVal str_Drive_Letter As String) As DriveTypeConst
+Public Function drive_DriveType(ByVal str_Drive_Letter As String) As my_DriveType
   Dim m_Drive As New my_Drive_Object
   
   Set m_Drive = drive_INIT(str_Drive_Letter)

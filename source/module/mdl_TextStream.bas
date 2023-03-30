@@ -7,9 +7,9 @@ Option Explicit
 '
 
 Public Function textstream_INIT(ByVal filename As String _
-                     , Optional ByVal mode As IOMode = ForAppending _
+                     , Optional ByVal mode As my_IOMode = ForAppending _
                      , Optional ByVal create As Boolean = False _
-                     , Optional ByVal format As Tristate = TristateUseDefault _
+                     , Optional ByVal format As my_Tristate = TristateUseDefault _
                      , Optional ByVal overwrite As Boolean = True _
                      , Optional ByVal unicode As Boolean = True) As my_TextStream_Object
   

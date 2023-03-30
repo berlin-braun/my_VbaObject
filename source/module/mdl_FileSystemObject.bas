@@ -213,9 +213,9 @@ Public Function filesystemobject_MoveFolder(ByVal source As String _
 End Function
 
 Public Function filesystemobject_OpenTextFile(ByVal filename As String _
-                                   , Optional ByVal mode As IOMode = ForAppending _
+                                   , Optional ByVal mode As my_IOMode = ForAppending _
                                    , Optional ByVal create As Boolean = False _
-                                   , Optional ByVal format As Tristate = TristateUseDefault) As Object
+                                   , Optional ByVal format As my_Tristate = TristateUseDefault) As Object
   Dim m_FSO As New my_FileSystemObject_Object
   
   Set filesystemobject_OpenTextFile = m_FSO.OpenTextFile(filename, mode, create, format)

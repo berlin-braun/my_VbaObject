@@ -5,8 +5,21 @@ Attribute VB_Exposed = False
 Option Compare Database
 Option Explicit
 
-Private my_fso  As Scripting.FileSystemObject
+Private my_fso  As Object ' Scripting.FileSystemObject
 Private my_txs  As Object
+
+Public Enum my_Tristate
+  TristateFalse = 0
+  TristateMixed = -2
+  TristateTrue = -1
+  TristateUseDefault = -2
+End Enum
+
+Public Enum my_IOMode
+  ForAppending = 8
+  ForReading = 1
+  ForWriting = 2
+End Enum
 '
 
 
@@ -84,7 +97,7 @@ Public Function CreateTextFile(ByVal filename As String _
   Set my_fso = Nothing
   Set my_txs = Nothing
   
-  Set my_fso = New Scripting.FileSystemObject
+  Set my_fso = CreateObject("Scripting.FileSystemObject") ' New Scripting.FileSystemObject
   Set my_txs = my_fso.CreateTextFile(filename, overwrite, unicode)
   
   Set CreateTextFile = my_txs
@@ -92,14 +105,14 @@ Public Function CreateTextFile(ByVal filename As String _
 End Function
 
 Public Function OpenTextFile(ByVal filename As String _
-                  , Optional ByVal mode As IOMode = ForAppending _
+                  , Optional ByVal mode As my_IOMode = ForAppending _
                   , Optional ByVal create As Boolean = False _
-                  , Optional ByVal format As Tristate = TristateUseDefault) As Object
+                  , Optional ByVal format As my_Tristate = TristateUseDefault) As Object
   
   Set my_fso = Nothing
   Set my_txs = Nothing
   
-  Set my_fso = New Scripting.FileSystemObject
+  Set my_fso = CreateObject("Scripting.FileSystemObject") ' New Scripting.FileSystemObject
   Set my_txs = my_fso.OpenTextFile(filename, mode, create, format)
   
   Set OpenTextFile = my_txs

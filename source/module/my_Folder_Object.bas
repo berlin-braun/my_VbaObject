@@ -5,7 +5,7 @@ Attribute VB_Exposed = False
 Option Compare Database
 Option Explicit
 
-Private my_fso  As Scripting.FileSystemObject
+Private my_fso  As Object ' Scripting.FileSystemObject
 Private my_fdr  As Object
 '
 
@@ -47,7 +47,7 @@ End Property
 Public Property Let Name(ByVal str_Folder As String)
   
   Set my_fso = Nothing
-  Set my_fso = New Scripting.FileSystemObject
+  Set my_fso = CreateObject("Scripting.FileSystemObject") ' New Scripting.FileSystemObject
   
   Set my_fdr = my_fso.GetFolder(str_Folder)
   

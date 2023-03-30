@@ -5,7 +5,7 @@ Attribute VB_Exposed = False
 Option Compare Database
 Option Explicit
 
-Private my_fso As Scripting.FileSystemObject
+Private my_fso As Object ' Scripting.FileSystemObject
 Private my_fle As Object
 '
 
@@ -45,7 +45,7 @@ End Property
 Public Property Let Name(ByVal str_File As String)
   
   Set my_fso = Nothing
-  Set my_fso = New Scripting.FileSystemObject
+  Set my_fso = CreateObject("Scripting.FileSystemObject") ' New Scripting.FileSystemObject
   
   Set my_fle = my_fso.GetFile(str_File)
   
@@ -111,20 +111,20 @@ Public Function CreateTextFile(filename As String _
   Set my_fso = Nothing
   Set my_fle = Nothing
   
-  Set my_fso = New Scripting.FileSystemObject
+  Set my_fso = CreateObject("Scripting.FileSystemObject") ' New Scripting.FileSystemObject
   Set my_fle = my_fso.CreateTextFile(filename, overwrite, unicode)
   
 End Function
 
 Public Function OpenAsTextStream(ByVal filename As String _
-                      , Optional ByVal mode As IOMode = ForAppending _
-                      , Optional ByVal format As Tristate = TristateUseDefault) As Object
+                      , Optional ByVal mode As my_IOMode = ForAppending _
+                      , Optional ByVal format As my_Tristate = TristateUseDefault) As Object
   Dim my_txs As Object
 
   Set my_fso = Nothing
   Set my_txs = Nothing
 
-  Set my_fso = New Scripting.FileSystemObject
+  Set my_fso = CreateObject("Scripting.FileSystemObject") ' New Scripting.FileSystemObject
   Set my_fle = my_fso.GetFile(filename)
   Set my_txs = my_fle.OpenAsTextStream(filename, mode, format)
 
